@@ -19,7 +19,8 @@ public class HelloWorld {
         Scanner scanner = new Scanner(System.in);  
         String s = scanner.nextLine();  
         
-        System.out.println(s);
+        System.out.println(s); 
+        int n;
         
 
         
