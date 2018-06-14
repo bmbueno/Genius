@@ -3,6 +3,7 @@ package Pacote1;
 //import java.util.Scanner;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 /**
@@ -17,6 +18,7 @@ public class Jogo {
     Boolean perdeuJogo;
     ArrayList<String> sequenciaBotoesGerada;
     ArrayList<String> sequenciaBotoesClicados;
+    int numeroDeBotoesGerados = 0;
 
     public Jogo() {
         this.sequenciaBotoesGerada = new ArrayList();
@@ -35,19 +37,42 @@ public class Jogo {
     private void sairJogo(){
         
     }
-   // private String sorteiaProxBotao(){
+    public String sorteiaProxBotao(){
         
+        String proxBotaoÉ = null;
         
-  //  }
-   // private Boolean verificaAcerto(String BotaoGerado, String BotaoClicado){
+        Random gerarNumero = new Random();
         
-   // }
+        switch(gerarNumero.nextInt(4)){
+            case 0:
+                proxBotaoÉ = "Verde";
+                break;
+            case 1:
+                proxBotaoÉ = "Azul";
+                break;
+            case 2:
+                proxBotaoÉ = "Amarelo";
+                break;
+            case 3:
+                proxBotaoÉ = "Vermelho";
+                break;
+        }
+        return proxBotaoÉ;
+   }
+    
+    public Boolean verificaAcertoBotao(String BotaoGerado, String BotaoClicado){
+        Boolean acertou;
+        acertou = BotaoGerado.equals(BotaoClicado);
+        return acertou; 
+    }
+    
     private void setPontuaçaoJogador(){
         
     }
     private void pausaJogo(){
         
     }
+    
 }
 
 

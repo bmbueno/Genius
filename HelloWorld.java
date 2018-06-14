@@ -6,6 +6,7 @@
 package Pacote1;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -15,16 +16,25 @@ import java.util.Scanner;
 public class HelloWorld {
     public static void main(String[] args){
         
-        System.out.println("Ola Mundo");      
-        Scanner scanner = new Scanner(System.in);  
-        String s = scanner.nextLine();  
-        
-        System.out.println(s); 
-        int n;
-        
+        Jogo jogo = new Jogo();
+        Scanner scanner = new Scanner(System.in); 
+        int i = 0;
+        int j;
+       
+        while(i < 10){
+            jogo.sequenciaBotoesGerada.add(jogo.sorteiaProxBotao());
+            System.out.println(jogo.sequenciaBotoesGerada);  
+            
+            jogo.numeroDeBotoesGerados++;
 
+            
+            for(j = 0; j < jogo.numeroDeBotoesGerados; j++){ 
+                jogo.sequenciaBotoesClicados.add(scanner.nextLine());
+            }
+            i++;
         
-
+        }
+            
     }
 }
 
