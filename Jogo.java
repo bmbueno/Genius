@@ -35,13 +35,13 @@ public class Jogo {
     private void sairJogo(){
         
     }
-    private String sorteiaProxBotao(){
+   // private String sorteiaProxBotao(){
         
         
-    }
-    private Boolean verificaAcerto(String BotaoGerado, String BotaoClicado){
+  //  }
+   // private Boolean verificaAcerto(String BotaoGerado, String BotaoClicado){
         
-    }
+   // }
     private void setPontuaçaoJogador(){
         
     }
